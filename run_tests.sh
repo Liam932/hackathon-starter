@@ -7,4 +7,5 @@ npm i
 npm test
 
 exit_code=$?
+echo "Exiting: $exit_code"
 exit "$exit_code"
