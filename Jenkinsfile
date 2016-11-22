@@ -1,14 +1,12 @@
-node {
-
-    stage 'Build'
-    checkout scm
-    sh "./install_node.sh"
-    sh "./run_tests.sh"
-
-     stage 'Test'
-     echo("hello from Test")
-
-     stage 'Deploy'
-     echo("hello from Deploy")
-
+pipeline {
+  agent docker:'node:6.3'
+  stages {
+    stage('build') {
+      steps {
+        sh 'npm --version'
+        sh 'npm install'
+        sh 'npm test'
+      }
+    }
+  }
 }
