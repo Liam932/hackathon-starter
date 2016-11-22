@@ -1,6 +1,7 @@
 node {
 
     stage 'Build'
+    checkout scm
     echo("hello from Build")
 
      stage 'Test'
