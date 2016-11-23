@@ -4,7 +4,7 @@ pipeline {
     stage('build') {
       steps {
         sh 'npm --version'
-        sh 'sudo npm i'
+        sh 'npm i'
         sh 'npm test'
       }
     }
