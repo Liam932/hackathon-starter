@@ -4,6 +4,8 @@ FROM node:6
 
 RUN npm i -g yarn
 
+RUN mkdir /.yarn
+
 USER jenkins
 
 
