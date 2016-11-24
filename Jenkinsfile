@@ -6,6 +6,7 @@ pipeline {
           sh 'npm --version'
           sh 'pwd'
           sh 'ls -la'
+          sh "npm install"
         }
     }
     stage ('test') {
