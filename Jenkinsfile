@@ -5,6 +5,7 @@ pipeline {
       steps {
           sh 'npm --version'
           sh 'pwd'
+          sh 'echo "$USER"'
           sh 'ls -lah /'
           sh "npm install"
         }
