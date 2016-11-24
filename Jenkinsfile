@@ -1,7 +1,8 @@
 pipeline {
-  agent dockerfile:true
+  agent none
   stages {
     stage('build') {
+      agent dockerfile:true
       steps {
           sh 'npm --version'
           sh 'pwd'
