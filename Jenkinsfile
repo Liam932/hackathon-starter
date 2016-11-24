@@ -1,12 +1,12 @@
 pipeline {
-  agent dockerfile:true
+  agent docker:'node:6.3'
   stages {
     stage('build') {
-      steps {
-        sh 'npm --version'
-        sh 'ls -la'
-        sh 'npm test'
-      }
+      sh 'npm --version'
+      sh 'npm install'
+    }
+    stage ('test') {
+      sh 'npm test'
     }
   }
 }
