@@ -2,6 +2,8 @@ FROM node:6
 
 #ARG NPM_TOKEN
 
+RUN npm i -g yarn
+
 USER jenkins
 
 
