@@ -2,9 +2,7 @@ FROM node:6
 
 #ARG NPM_TOKEN
 
-RUN npm i -g yarn
-
-RUN mkdir /.yarn
+RUN mkdir /.npm
 
 USER jenkins
 

@@ -7,12 +7,12 @@ pipeline {
           sh 'pwd'
           sh 'echo "$USER"'
           sh 'ls -lah /'
-          sh "yarn install"
+          sh "npm install"
         }
     }
     stage ('test') {
         steps {
-            sh 'yarn test'
+            sh 'npm test'
 
          }
     }
