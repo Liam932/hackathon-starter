@@ -1,8 +1,7 @@
 pipeline {
-  agent none
+  agent label:''
   stages {
     stage('build') {
-      agent dockerfile:true
       steps {
           sh 'git config -l'
         }
